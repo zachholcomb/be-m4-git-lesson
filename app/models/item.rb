@@ -21,4 +21,7 @@ class Item < ApplicationRecord
 
   enum status: [ "active", "retired" ]
 
+  def get_title
+    self.title
+  end
 end

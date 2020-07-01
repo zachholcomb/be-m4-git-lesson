@@ -10,4 +10,8 @@ class User < ApplicationRecord
   validates_uniqueness_of :email
   has_secure_password
   enum role: ["default", "admin"]
+
+  def get_email
+    self.email
+  end
 end
