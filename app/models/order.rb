@@ -37,4 +37,8 @@ class Order < ApplicationRecord
   def self.total_completed
     where(status: 3).count
   end
+
+  def get_order_status
+    self.status
+  end
 end
